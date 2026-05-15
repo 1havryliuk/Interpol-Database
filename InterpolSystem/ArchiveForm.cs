@@ -5,27 +5,26 @@ using System.Windows.Forms;
 
 namespace InterpolSystem
 {
-    public partial class FormRegistry : Form
+    public partial class ArchiveForm : Form
     {
         private List<Criminal> criminals;
 
-        public FormRegistry(List<Criminal> list)
+        public ArchiveForm(List<Criminal> list)
         {
             InitializeComponent();
 
             criminals = list;
 
-            LoadTable();
+            LoadArchive();
         }
 
-        private void LoadTable()
+        private void LoadArchive()
         {
             dataGridView1.DataSource = null;
 
             dataGridView1.DataSource =
-                criminals.Where(c => !c.IsArchived).ToList();
+                criminals.Where(c => c.IsArchived).ToList();
 
-            // Ховаємо зайві поля
             string[] hiddenColumns =
             {
                 "Height",
@@ -53,7 +52,6 @@ namespace InterpolSystem
                 }
             }
 
-            // Назви колонок
             if (dataGridView1.Columns["FirstName"] != null)
                 dataGridView1.Columns["FirstName"].HeaderText = "Ім'я";
 
@@ -67,55 +65,19 @@ namespace InterpolSystem
                 dataGridView1.Columns["Gang"].HeaderText = "Угруповання";
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0)
-                return;
-
-            Criminal criminal =
-                (Criminal)dataGridView1.Rows[e.RowIndex].DataBoundItem;
-
-            CriminalDetailsForm form =
-                new CriminalDetailsForm(criminal, criminals);
-
-            form.ShowDialog();
-
-            LoadTable();
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void buttonArchive_Click(object sender, EventArgs e)
+        private void ArchiveForm_Load(object sender, EventArgs e)
         {
-            this.Hide();
 
-            ArchiveForm form = new ArchiveForm(criminals);
-
-            form.ShowDialog();
-
-            this.Show();
         }
 
-        private void buttonHome_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-
-            form.Show();
-
-            this.Hide();
-        }
-
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            CriminalDetailsForm form =
-                new CriminalDetailsForm(criminals);
-
-            form.ShowDialog();
-
-            LoadTable();
+            this.Close();
         }
     }
 }

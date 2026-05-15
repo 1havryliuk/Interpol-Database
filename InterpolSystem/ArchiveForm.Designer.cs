@@ -1,6 +1,6 @@
 ﻿namespace InterpolSystem
 {
-    partial class FormRegistry
+    partial class ArchiveForm
     {
         /// <summary>
         /// Required designer variable.
@@ -10,26 +10,28 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
                 components.Dispose();
             }
-
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
-            buttonAdd = new Button();
+            buttonBack = new Button();
             label1 = new Label();
-            buttonArchive = new Button();
-            buttonHome = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -38,7 +40,7 @@
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.Snow;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(0, 100);
@@ -48,80 +50,57 @@
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(911, 475);
+            dataGridView1.Size = new Size(946, 558);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top;
-            panel1.Controls.Add(buttonAdd);
+            panel1.BackColor = Color.MidnightBlue;
+            panel1.Controls.Add(buttonBack);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(buttonArchive);
-            panel1.Controls.Add(buttonHome);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(911, 100);
+            panel1.Size = new Size(946, 100);
             panel1.TabIndex = 1;
-            panel1.TabStop = true;
             // 
-            // buttonAdd
+            // buttonBack
             // 
-            buttonAdd.Anchor = AnchorStyles.Top;
-            buttonAdd.Location = new Point(507, 49);
-            buttonAdd.Name = "buttonAdd";
-            buttonAdd.Size = new Size(94, 29);
-            buttonAdd.TabIndex = 4;
-            buttonAdd.Text = "Додати";
-            buttonAdd.UseVisualStyleBackColor = true;
-            buttonAdd.Click += buttonAdd_Click;
+            buttonBack.BackColor = Color.WhiteSmoke;
+            buttonBack.FlatStyle = FlatStyle.Flat;
+            buttonBack.Location = new Point(25, 37);
+            buttonBack.Name = "buttonBack";
+            buttonBack.Size = new Size(94, 29);
+            buttonBack.TabIndex = 3;
+            buttonBack.Text = "Назад";
+            buttonBack.UseVisualStyleBackColor = false;
+            buttonBack.Click += buttonBack_Click;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("MS PGothic", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(300, 9);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(330, 34);
             label1.Name = "label1";
-            label1.Size = new Size(289, 28);
-            label1.TabIndex = 0;
-            label1.Text = "INTERPOL DATABASE";
+            label1.Size = new Size(263, 28);
+            label1.TabIndex = 2;
+            label1.Text = "INTERPOL ARCHIVE";
             // 
-            // buttonArchive
-            // 
-            buttonArchive.Anchor = AnchorStyles.Top;
-            buttonArchive.Location = new Point(391, 49);
-            buttonArchive.Name = "buttonArchive";
-            buttonArchive.Size = new Size(94, 29);
-            buttonArchive.TabIndex = 3;
-            buttonArchive.Text = "Архів";
-            buttonArchive.UseVisualStyleBackColor = true;
-            buttonArchive.Click += buttonArchive_Click;
-            // 
-            // buttonHome
-            // 
-            buttonHome.Anchor = AnchorStyles.Top;
-            buttonHome.Location = new Point(271, 49);
-            buttonHome.Name = "buttonHome";
-            buttonHome.Size = new Size(94, 29);
-            buttonHome.TabIndex = 2;
-            buttonHome.Text = "Головна";
-            buttonHome.UseVisualStyleBackColor = true;
-            buttonHome.Click += buttonHome_Click;
-            // 
-            // FormRegistry
+            // ArchiveForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Menu;
-            ClientSize = new Size(911, 575);
+            BackColor = Color.MidnightBlue;
+            ClientSize = new Size(946, 558);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
-            Name = "FormRegistry";
+            Name = "ArchiveForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormRegistry";
+            Text = "INTERPOL ARCHIVE";
             WindowState = FormWindowState.Maximized;
+            Load += ArchiveForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -131,13 +110,8 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button buttonHome;
-        private Button buttonArchive;
-        private Button buttonRegistry;
-        private Button buttonAdd;
-        private Panel panelTop;
-        private Label labelTitle;
         private Panel panel1;
         private Label label1;
+        private Button buttonBack;
     }
 }

@@ -17,7 +17,7 @@ namespace InterpolSystem
 
         public string BirthPlace { get; set; } = "";
 
-        public DateTime BirthDate { get; set; }
+        public DateTime BirthDate { get; set; } = DateTime.MinValue;
 
         public string LastResidence { get; set; } = "";
         public string Languages { get; set; } = "";
@@ -27,7 +27,7 @@ namespace InterpolSystem
 
         public string Gang { get; set; } = "";
 
-        public bool IsArchived { get; set; }
-        public bool IsDead { get; set; }
+        public bool IsArchived { get; set; } = false;
+        public bool IsDead { get; set; } = false;
     }
 }

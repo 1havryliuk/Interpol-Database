@@ -36,6 +36,7 @@
             label3 = new Label();
             buttonAdd = new Button();
             buttonOpenRegistry = new Button();
+            buttonArchive = new Button();
             SuspendLayout();
             // 
             // textBoxFirstName
@@ -92,7 +93,7 @@
             // 
             // buttonAdd
             // 
-            buttonAdd.Location = new Point(329, 287);
+            buttonAdd.Location = new Point(298, 287);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(103, 29);
             buttonAdd.TabIndex = 8;
@@ -102,7 +103,7 @@
             // 
             // buttonOpenRegistry
             // 
-            buttonOpenRegistry.Location = new Point(456, 287);
+            buttonOpenRegistry.Location = new Point(426, 287);
             buttonOpenRegistry.Name = "buttonOpenRegistry";
             buttonOpenRegistry.Size = new Size(112, 29);
             buttonOpenRegistry.TabIndex = 9;
@@ -110,11 +111,22 @@
             buttonOpenRegistry.UseVisualStyleBackColor = true;
             buttonOpenRegistry.Click += buttonOpenRegistry_Click;
             // 
+            // buttonArchive
+            // 
+            buttonArchive.Location = new Point(563, 287);
+            buttonArchive.Name = "buttonArchive";
+            buttonArchive.Size = new Size(102, 29);
+            buttonArchive.TabIndex = 10;
+            buttonArchive.Text = "Архів";
+            buttonArchive.UseVisualStyleBackColor = true;
+            buttonArchive.Click += buttonArchive_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(945, 642);
+            Controls.Add(buttonArchive);
             Controls.Add(buttonOpenRegistry);
             Controls.Add(buttonAdd);
             Controls.Add(label3);
@@ -139,5 +151,6 @@
         private Label label3;
         private Button buttonAdd;
         private Button buttonOpenRegistry;
+        private Button buttonArchive;
     }
 }
