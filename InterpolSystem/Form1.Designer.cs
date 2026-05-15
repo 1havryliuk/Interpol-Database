@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             textBoxFirstName = new TextBox();
-            textBoxHeight = new TextBox();
             textBoxLastName = new TextBox();
             textBoxNickname = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
             buttonAdd = new Button();
             buttonOpenRegistry = new Button();
             SuspendLayout();
@@ -47,14 +45,6 @@
             textBoxFirstName.Size = new Size(169, 27);
             textBoxFirstName.TabIndex = 0;
             textBoxFirstName.TextChanged += textBox1_TextChanged;
-            // 
-            // textBoxHeight
-            // 
-            textBoxHeight.Location = new Point(415, 277);
-            textBoxHeight.Name = "textBoxHeight";
-            textBoxHeight.Size = new Size(169, 27);
-            textBoxHeight.TabIndex = 1;
-            textBoxHeight.TextChanged += textBoxHeight_TextChanged;
             // 
             // textBoxLastName
             // 
@@ -100,30 +90,21 @@
             label3.TabIndex = 6;
             label3.Text = "Кличка:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(363, 277);
-            label4.Name = "label4";
-            label4.Size = new Size(46, 20);
-            label4.TabIndex = 7;
-            label4.Text = "Зріст:";
-            // 
             // buttonAdd
             // 
-            buttonAdd.Location = new Point(348, 327);
+            buttonAdd.Location = new Point(329, 287);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(103, 29);
             buttonAdd.TabIndex = 8;
             buttonAdd.Text = "Додати";
             buttonAdd.UseVisualStyleBackColor = true;
-            buttonAdd.Click += buttonAdd_Click_1;
+            buttonAdd.Click += buttonAdd_Click;
             // 
             // buttonOpenRegistry
             // 
-            buttonOpenRegistry.Location = new Point(478, 327);
+            buttonOpenRegistry.Location = new Point(456, 287);
             buttonOpenRegistry.Name = "buttonOpenRegistry";
-            buttonOpenRegistry.Size = new Size(106, 29);
+            buttonOpenRegistry.Size = new Size(112, 29);
             buttonOpenRegistry.TabIndex = 9;
             buttonOpenRegistry.Text = "Реєстр";
             buttonOpenRegistry.UseVisualStyleBackColor = true;
@@ -136,13 +117,11 @@
             ClientSize = new Size(945, 642);
             Controls.Add(buttonOpenRegistry);
             Controls.Add(buttonAdd);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBoxNickname);
             Controls.Add(textBoxLastName);
-            Controls.Add(textBoxHeight);
             Controls.Add(textBoxFirstName);
             Name = "Form1";
             Text = "Form1";
@@ -153,13 +132,11 @@
         #endregion
 
         private TextBox textBoxFirstName;
-        private TextBox textBoxHeight;
         private TextBox textBoxLastName;
         private TextBox textBoxNickname;
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
         private Button buttonAdd;
         private Button buttonOpenRegistry;
     }
