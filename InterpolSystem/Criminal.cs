@@ -25,7 +25,7 @@ namespace InterpolSystem
         public string CrimeProfession { get; set; } = "";
         public string LastCase { get; set; } = "";
 
-        public string Gang { get; set; } = "";
+        public Gang? Gang { get; set; }
 
         public bool IsArchived { get; set; } = false;
         public bool IsDead { get; set; } = false;

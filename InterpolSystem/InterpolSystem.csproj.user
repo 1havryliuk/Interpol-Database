@@ -13,5 +13,8 @@
     <Compile Update="FormRegistry.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GangDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

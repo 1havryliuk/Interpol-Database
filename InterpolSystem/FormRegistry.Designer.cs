@@ -26,6 +26,9 @@
         {
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
+            buttonClear = new Button();
+            buttonSearch = new Button();
+            txtSearch = new TextBox();
             buttonAdd = new Button();
             label1 = new Label();
             buttonArchive = new Button();
@@ -56,6 +59,9 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top;
+            panel1.Controls.Add(buttonClear);
+            panel1.Controls.Add(buttonSearch);
+            panel1.Controls.Add(txtSearch);
             panel1.Controls.Add(buttonAdd);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(buttonArchive);
@@ -65,6 +71,33 @@
             panel1.Size = new Size(911, 100);
             panel1.TabIndex = 1;
             panel1.TabStop = true;
+            // 
+            // buttonClear
+            // 
+            buttonClear.Location = new Point(800, 65);
+            buttonClear.Name = "buttonClear";
+            buttonClear.Size = new Size(82, 29);
+            buttonClear.TabIndex = 6;
+            buttonClear.Text = "Очистити";
+            buttonClear.UseVisualStyleBackColor = true;
+            buttonClear.Click += buttonClear_Click;
+            // 
+            // buttonSearch
+            // 
+            buttonSearch.Location = new Point(800, 30);
+            buttonSearch.Name = "buttonSearch";
+            buttonSearch.Size = new Size(82, 29);
+            buttonSearch.TabIndex = 5;
+            buttonSearch.Text = "Пошук";
+            buttonSearch.UseVisualStyleBackColor = true;
+            buttonSearch.Click += buttonSearch_Click;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(646, 49);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(148, 27);
+            txtSearch.TabIndex = 2;
             // 
             // buttonAdd
             // 
@@ -139,5 +172,10 @@
         private Label labelTitle;
         private Panel panel1;
         private Label label1;
+        private Label label3;
+        private Label label2;
+        private TextBox txtSearch;
+        private Button buttonClear;
+        private Button buttonSearch;
     }
 }

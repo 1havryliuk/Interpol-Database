@@ -48,7 +48,7 @@ namespace InterpolSystem
             txtLanguages.Text = _criminal.Languages;
             txtCrimeProfession.Text = _criminal.CrimeProfession;
             txtLastCase.Text = _criminal.LastCase;
-            txtGang.Text = _criminal.Gang;
+            txtGang.Text = _criminal.Gang?.Name;
 
             chkArchived.Checked = _criminal.IsArchived;
             chkDead.Checked = _criminal.IsDead;
@@ -76,7 +76,10 @@ namespace InterpolSystem
             _criminal.Languages = txtLanguages.Text.Trim();
             _criminal.CrimeProfession = txtCrimeProfession.Text.Trim();
             _criminal.LastCase = txtLastCase.Text.Trim();
-            _criminal.Gang = txtGang.Text.Trim();
+            _criminal.Gang = new Gang
+            {
+                Name = txtGang.Text
+            };
 
             _criminal.IsArchived = chkArchived.Checked;
             _criminal.IsDead = chkDead.Checked;
@@ -130,6 +133,17 @@ namespace InterpolSystem
         private void txtLastResidence_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtGang_Click(object sender, EventArgs e)
+        {
+            if (_criminal.Gang != null)
+            {
+                GangDetailsForm form =
+                    new GangDetailsForm(_criminal.Gang);
+
+                form.ShowDialog();
+            }
         }
     }
 }

@@ -117,5 +117,42 @@ namespace InterpolSystem
 
             LoadTable();
         }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            string search = txtSearch.Text.ToLower();
+
+            var filtered = criminals.Where(c =>
+
+                !c.IsArchived &&
+
+                (
+                    c.FirstName.ToLower().Contains(search)
+                    ||
+
+                    c.LastName.ToLower().Contains(search)
+                    ||
+
+                    c.Nickname.ToLower().Contains(search)
+                    ||
+
+                   (
+                    c.Gang != null &&
+                    c.Gang.Name.ToLower().Contains(search)
+                   )
+                )
+
+            ).ToList();
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = filtered;
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            txtSearch.Clear();
+
+            LoadTable();
+        }
     }
 }

@@ -8,10 +8,14 @@ namespace InterpolSystem
     public partial class Form1 : Form
     {
         public List<Criminal> criminals = new List<Criminal>();
+        public List<Gang> gangs = new List<Gang>();
 
         public Form1()
         {
             InitializeComponent();
+
+            SeedGangs();
+
             SeedData();
         }
 
@@ -31,7 +35,7 @@ namespace InterpolSystem
                 Languages = "Англійська",
                 CrimeProfession = "Керівник мафії",
                 LastCase = "Незаконна торгівля зброєю",
-                Gang = "Peaky Blinders"
+                Gang = gangs[0]
             });
 
             criminals.Add(new Criminal
@@ -48,7 +52,7 @@ namespace InterpolSystem
                 Languages = "Іспанська",
                 CrimeProfession = "Наркобарон",
                 LastCase = "Контрабанда наркотиків",
-                Gang = "Медельїнський картель"
+                Gang = gangs[1]
             });
 
             criminals.Add(new Criminal
@@ -65,7 +69,7 @@ namespace InterpolSystem
                 Languages = "Англійська",
                 CrimeProfession = "Мафіозі",
                 LastCase = "Рекет",
-                Gang = "Chicago Outfit"
+                Gang = gangs[2]
             });
 
             criminals.Add(new Criminal
@@ -82,7 +86,7 @@ namespace InterpolSystem
                 Languages = "Італійська, англійська",
                 CrimeProfession = "Глава мафії",
                 LastCase = "Відмивання грошей",
-                Gang = "Сім'я Корлеоне"
+                Gang = gangs[3]
             });
 
             criminals.Add(new Criminal
@@ -99,7 +103,7 @@ namespace InterpolSystem
                 Languages = "Іспанська",
                 CrimeProfession = "Контрабандист",
                 LastCase = "Наркоторгівля",
-                Gang = "Montana Group"
+                Gang = gangs[4]
             });
             criminals.Add(new Criminal
             {
@@ -115,7 +119,7 @@ namespace InterpolSystem
                 Languages = "Англійська",
                 CrimeProfession = "Мафіозі",
                 LastCase = "Корупція",
-                Gang = "Genovese Family"
+                Gang = gangs[5]
             });
 
             criminals.Add(new Criminal
@@ -132,7 +136,7 @@ namespace InterpolSystem
                 Languages = "Англійська",
                 CrimeProfession = "Глава мафії",
                 LastCase = "Рекет",
-                Gang = "Gambino Family"
+                Gang = gangs[6]
             });
 
             criminals.Add(new Criminal
@@ -149,7 +153,7 @@ namespace InterpolSystem
                 Languages = "Іспанська",
                 CrimeProfession = "Наркобарон",
                 LastCase = "Контрабанда наркотиків",
-                Gang = "Sinaloa Cartel"
+                Gang = gangs[7]
             });
 
             criminals.Add(new Criminal
@@ -166,7 +170,7 @@ namespace InterpolSystem
                 Languages = "Англійська",
                 CrimeProfession = "Фінансист мафії",
                 LastCase = "Відмивання грошей",
-                Gang = "National Crime Syndicate"
+                Gang = gangs[8]
             });
 
             criminals.Add(new Criminal
@@ -183,7 +187,7 @@ namespace InterpolSystem
                 Languages = "Італійська",
                 CrimeProfession = "Бос мафії",
                 LastCase = "Замовні вбивства",
-                Gang = "Cosa Nostra"
+                Gang = gangs[9]
             });
 
             criminals.Add(new Criminal
@@ -200,7 +204,7 @@ namespace InterpolSystem
                 Languages = "Італійська, англійська",
                 CrimeProfession = "Організатор мафії",
                 LastCase = "Контрабанда",
-                Gang = "Luciano Family"
+                Gang = gangs[10]
             });
 
             criminals.Add(new Criminal
@@ -217,7 +221,7 @@ namespace InterpolSystem
                 Languages = "Англійська",
                 CrimeProfession = "Гангстер",
                 LastCase = "Вбивства",
-                Gang = "Winter Hill Gang"
+                Gang = gangs[11]
             });
 
             criminals.Add(new Criminal
@@ -234,7 +238,86 @@ namespace InterpolSystem
                 Languages = "Італійська",
                 CrimeProfession = "Мафіозі",
                 LastCase = "Рекет",
-                Gang = "Gambino Family"
+                Gang = gangs[6]
+            });
+        }
+        private void SeedGangs()
+        {
+            gangs.Add(new Gang
+            {
+                Name = "Peaky Blinders",
+                Country = "Велика Британія",
+                MembersCount = 120
+            });
+
+            gangs.Add(new Gang
+            {
+                Name = "Медельїнський картель",
+                Country = "Колумбія",
+                MembersCount = 500
+            });
+
+            gangs.Add(new Gang
+            {
+                Name = "Chicago Outfit",
+                Country = "США",
+                MembersCount = 300
+            });
+
+            gangs.Add(new Gang
+            {
+                Name = "Сім'я Корлеоне",
+                Country = "Італія",
+                MembersCount = 150
+            });
+
+            gangs.Add(new Gang
+            {
+                Name = "Montana Group",
+                Country = "Куба",
+                MembersCount = 80
+            });
+            gangs.Add(new Gang
+            {
+                Name = "Genovese Family",
+                Country = "США",
+                MembersCount = 250
+            });
+            gangs.Add(new Gang
+            {
+                Name = "Gambino Family",
+                Country = "США",
+                MembersCount = 400
+            });
+            gangs.Add(new Gang
+            {
+                Name = "Sinaloa Cartel",
+                Country = "Мексика",
+                MembersCount = 1000
+            });
+            gangs.Add(new Gang
+            {
+                Name = "National Crime Syndicate",
+                Country = "США",
+                MembersCount = 350
+            });
+            gangs.Add(new Gang
+            {
+                Name = "Cosa Nostra",
+                Country = "Італія",
+                MembersCount = 700
+            });
+            gangs.Add(new Gang
+            {
+                Name = "Luciano Family",
+                Country = "Італія",
+                MembersCount = 200
+            });
+            gangs.Add(new Gang
+            {
+                Name = "Winter Hill Gang",
+                Country = "США",
+                MembersCount = 170
             });
         }
 

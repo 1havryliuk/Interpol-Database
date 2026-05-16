@@ -321,8 +321,10 @@
             txtGang.Location = new Point(171, 583);
             txtGang.Margin = new Padding(3, 4, 3, 4);
             txtGang.Name = "txtGang";
+            txtGang.ReadOnly = true;
             txtGang.Size = new Size(399, 27);
             txtGang.TabIndex = 15;
+            txtGang.DoubleClick += txtGang_Click;
             // 
             // chkArchived
             // 
