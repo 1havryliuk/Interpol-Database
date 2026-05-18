@@ -9,11 +9,15 @@ namespace InterpolSystem
     {
         private List<Criminal> criminals;
 
-        public FormRegistry(List<Criminal> list)
+        private Form1 _owner;
+
+        public FormRegistry(List<Criminal> list, Form1 owner)
         {
             InitializeComponent();
 
             criminals = list;
+
+            _owner = owner;
 
             LoadTable();
         }
@@ -81,6 +85,7 @@ namespace InterpolSystem
             form.ShowDialog();
 
             LoadTable();
+            _owner.SaveData();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -97,6 +102,7 @@ namespace InterpolSystem
             form.ShowDialog();
 
             this.Show();
+            
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -116,6 +122,7 @@ namespace InterpolSystem
             form.ShowDialog();
 
             LoadTable();
+            _owner.SaveData();
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)

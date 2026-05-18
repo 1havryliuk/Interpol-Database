@@ -135,6 +135,25 @@ namespace InterpolSystem
 
         }
 
+        protected override bool ProcessCmdKey(
+            ref Message msg,
+            Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                MessageBox.Show(
+                    "Форма редагування злочинця.\n" +
+                    "Enter — зберегти\n" +
+                    "Esc — скасувати",
+                    "Допомога");
+
+                return true;
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+
         private void txtGang_Click(object sender, EventArgs e)
         {
             if (_criminal.Gang != null)

@@ -79,5 +79,25 @@ namespace InterpolSystem
         {
             this.Close();
         }
+
+        private void dataGridView1_CellDoubleClick(
+            object sender,
+            DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            Criminal criminal =
+                (Criminal)dataGridView1
+                .Rows[e.RowIndex]
+                .DataBoundItem;
+
+            criminal.IsArchived = false;
+
+            MessageBox.Show(
+                "Злочинця розархівовано!");
+
+            LoadArchive();
+        }
     }
 }

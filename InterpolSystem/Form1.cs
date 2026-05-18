@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.IO;
+using System.Text.Json;
+using System.Text.Encodings.Web;
 
 namespace InterpolSystem
 {
@@ -9,6 +12,7 @@ namespace InterpolSystem
     {
         public List<Criminal> criminals = new List<Criminal>();
         public List<Gang> gangs = new List<Gang>();
+        private const string FILE_NAME = "criminals.json";
 
         public Form1()
         {
@@ -16,7 +20,14 @@ namespace InterpolSystem
 
             SeedGangs();
 
-            SeedData();
+            if (File.Exists(FILE_NAME))
+            {
+                LoadData();
+            }
+            else
+            {
+                SeedData();
+            }
         }
 
         private void SeedData()
@@ -32,6 +43,8 @@ namespace InterpolSystem
                 SpecialSigns = "Шрам на обличчі",
                 Citizenship = "Велика Британія",
                 LastResidence = "Бірмінгем",
+                BirthPlace = "Бірмінгем",
+                BirthDate = new DateTime(1890, 5, 12),
                 Languages = "Англійська",
                 CrimeProfession = "Керівник мафії",
                 LastCase = "Незаконна торгівля зброєю",
@@ -49,6 +62,8 @@ namespace InterpolSystem
                 SpecialSigns = "Татуювання на руці",
                 Citizenship = "Колумбія",
                 LastResidence = "Медельїн",
+                BirthPlace = "Ріонегро",
+                BirthDate = new DateTime(1949, 12, 1),
                 Languages = "Іспанська",
                 CrimeProfession = "Наркобарон",
                 LastCase = "Контрабанда наркотиків",
@@ -66,6 +81,8 @@ namespace InterpolSystem
                 SpecialSigns = "Шрам на щоці",
                 Citizenship = "США",
                 LastResidence = "Чикаго",
+                BirthPlace = "Бруклін",
+                BirthDate = new DateTime(1899, 1, 17),
                 Languages = "Англійська",
                 CrimeProfession = "Мафіозі",
                 LastCase = "Рекет",
@@ -83,6 +100,8 @@ namespace InterpolSystem
                 SpecialSigns = "Хриплий голос",
                 Citizenship = "Італія",
                 LastResidence = "Нью-Йорк",
+                BirthPlace = "Сицилія",
+                BirthDate = new DateTime(1891, 12, 7),
                 Languages = "Італійська, англійська",
                 CrimeProfession = "Глава мафії",
                 LastCase = "Відмивання грошей",
@@ -100,6 +119,8 @@ namespace InterpolSystem
                 SpecialSigns = "Шрам на руці",
                 Citizenship = "Куба",
                 LastResidence = "Маямі",
+                BirthPlace = "Гавана",
+                BirthDate = new DateTime(1940, 8, 3),
                 Languages = "Іспанська",
                 CrimeProfession = "Контрабандист",
                 LastCase = "Наркоторгівля",
@@ -116,6 +137,8 @@ namespace InterpolSystem
                 SpecialSigns = "Рубець на шиї",
                 Citizenship = "США",
                 LastResidence = "Нью-Йорк",
+                BirthPlace = "Кассано",
+                BirthDate = new DateTime(1891, 1, 26),
                 Languages = "Англійська",
                 CrimeProfession = "Мафіозі",
                 LastCase = "Корупція",
@@ -133,6 +156,8 @@ namespace InterpolSystem
                 SpecialSigns = "Татуювання",
                 Citizenship = "США",
                 LastResidence = "Бруклін",
+                BirthPlace = "Нью-Йорк",
+                BirthDate = new DateTime(1940, 10, 27),
                 Languages = "Англійська",
                 CrimeProfession = "Глава мафії",
                 LastCase = "Рекет",
@@ -150,6 +175,8 @@ namespace InterpolSystem
                 SpecialSigns = "Невисокий зріст",
                 Citizenship = "Мексика",
                 LastResidence = "Сіналоа",
+                BirthPlace = "Сіналоа",
+                BirthDate = new DateTime(1957, 4, 4),
                 Languages = "Іспанська",
                 CrimeProfession = "Наркобарон",
                 LastCase = "Контрабанда наркотиків",
@@ -167,6 +194,8 @@ namespace InterpolSystem
                 SpecialSigns = "Окуляри",
                 Citizenship = "США",
                 LastResidence = "Маямі",
+                BirthPlace = "Гродно",
+                BirthDate = new DateTime(1992, 7, 4),
                 Languages = "Англійська",
                 CrimeProfession = "Фінансист мафії",
                 LastCase = "Відмивання грошей",
@@ -184,6 +213,8 @@ namespace InterpolSystem
                 SpecialSigns = "Грубий голос",
                 Citizenship = "Італія",
                 LastResidence = "Сицилія",
+                BirthPlace = "Сицилія",
+                BirthDate = new DateTime(1987, 11, 24),
                 Languages = "Італійська",
                 CrimeProfession = "Бос мафії",
                 LastCase = "Замовні вбивства",
@@ -200,7 +231,10 @@ namespace InterpolSystem
                 EyeColor = "Карі",
                 SpecialSigns = "Шрам на обличчі",
                 Citizenship = "Італія",
+                BirthPlace = "Сицилія",
+                BirthDate = new DateTime(1897, 11, 24),
                 LastResidence = "Неаполь",
+
                 Languages = "Італійська, англійська",
                 CrimeProfession = "Організатор мафії",
                 LastCase = "Контрабанда",
@@ -218,6 +252,8 @@ namespace InterpolSystem
                 SpecialSigns = "Шрам на лобі",
                 Citizenship = "США",
                 LastResidence = "Бостон",
+                BirthPlace = "Палермо",
+                BirthDate = new DateTime(1962, 8, 24),
                 Languages = "Англійська",
                 CrimeProfession = "Гангстер",
                 LastCase = "Вбивства",
@@ -235,6 +271,8 @@ namespace InterpolSystem
                 SpecialSigns = "Повільна хода",
                 Citizenship = "Італія",
                 LastResidence = "Нью-Йорк",
+                BirthPlace = "Бостон",
+                BirthDate = new DateTime(1989, 9, 3),
                 Languages = "Італійська",
                 CrimeProfession = "Мафіозі",
                 LastCase = "Рекет",
@@ -320,6 +358,30 @@ namespace InterpolSystem
                 MembersCount = 170
             });
         }
+        public void SaveData()
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+            };
+
+            string json =
+                JsonSerializer.Serialize(criminals, options);
+
+            File.WriteAllText(FILE_NAME, json);
+        }
+        private void LoadData()
+        {
+            if (File.Exists(FILE_NAME))
+            {
+                string json = File.ReadAllText(FILE_NAME);
+
+                criminals =
+                    JsonSerializer.Deserialize<List<Criminal>>(json)
+                    ?? new List<Criminal>();
+            }
+        }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
@@ -343,7 +405,7 @@ namespace InterpolSystem
         {
             this.Hide();
 
-            FormRegistry form = new FormRegistry(criminals);
+            FormRegistry form = new FormRegistry(criminals, this);
 
             form.ShowDialog();
 

@@ -396,8 +396,10 @@
             // 
             // CriminalDetailsForm
             // 
+            AcceptButton = btnSave;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btnCancel;
             ClientSize = new Size(800, 773);
             Controls.Add(btnCancel);
             Controls.Add(btnDelete);
@@ -443,6 +445,7 @@
             Name = "CriminalDetailsForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Картка злочинця — Картотека Інтерполу";
+            KeyPreview = true;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -487,5 +490,6 @@
         private System.Windows.Forms.Button btnMarkDead;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnCancel;
+
     }
 }
