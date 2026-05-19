@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using InterpolSystem.Models;
 
 namespace InterpolSystem
 {
@@ -9,9 +10,9 @@ namespace InterpolSystem
     {
         private List<Criminal> criminals;
 
-        private Form1 _owner;
+        private MainForm _owner;
 
-        public FormRegistry(List<Criminal> list, Form1 owner)
+        public FormRegistry(List<Criminal> list, MainForm owner)
         {
             InitializeComponent();
 

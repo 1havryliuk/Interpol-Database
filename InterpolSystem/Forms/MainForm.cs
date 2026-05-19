@@ -9,13 +9,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace InterpolSystem
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         public List<Criminal> criminals = new List<Criminal>();
         public List<Gang> gangs = new List<Gang>();
         private const string FILE_NAME = "criminals.json";
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InterpolSystem
+namespace InterpolSystem.Models
 {
     public class Gang
     {

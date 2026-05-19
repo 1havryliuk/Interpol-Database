@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InterpolSystem
+namespace InterpolSystem.Models
 {
     public class Criminal
     {

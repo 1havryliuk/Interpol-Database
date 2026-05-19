@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace InterpolSystem
+namespace InterpolSystem.Models
 {
     public class Organization
     {
