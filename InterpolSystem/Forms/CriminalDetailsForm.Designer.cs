@@ -1,4 +1,6 @@
-﻿namespace InterpolSystem
+﻿using System.Windows.Forms;
+
+namespace InterpolSystem.Forms
 {
     partial class CriminalDetailsForm
     {
@@ -119,7 +121,7 @@
             txtNickname.Name = "txtNickname";
             txtNickname.Size = new Size(285, 27);
             txtNickname.TabIndex = 3;
-            txtNickname.KeyPress += txtHeight_KeyPress;
+            txtNickname.KeyPress += txtNickname_KeyPress;
             // 
             // lblHeight
             // 
@@ -129,7 +131,6 @@
             lblHeight.Size = new Size(78, 20);
             lblHeight.TabIndex = 34;
             lblHeight.Text = "Зріст (см):";
-            txtHeight.KeyPress += txtHeight_KeyPress;
             // 
             // txtHeight
             // 
@@ -138,6 +139,7 @@
             txtHeight.Name = "txtHeight";
             txtHeight.Size = new Size(91, 27);
             txtHeight.TabIndex = 4;
+            txtHeight.KeyPress += txtHeight_KeyPress;
             // 
             // lblHair
             // 

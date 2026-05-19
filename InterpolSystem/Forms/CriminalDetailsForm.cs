@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using InterpolSystem.Models;
 
-namespace InterpolSystem
+namespace InterpolSystem.Forms
 {
     public partial class CriminalDetailsForm : Form
     {

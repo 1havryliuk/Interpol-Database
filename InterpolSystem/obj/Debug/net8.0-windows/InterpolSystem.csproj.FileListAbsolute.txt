@@ -3,11 +3,6 @@ C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\bin\Debug\ne
 C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\bin\Debug\net8.0-windows\InterpolSystem.runtimeconfig.json
 C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\bin\Debug\net8.0-windows\InterpolSystem.dll
 C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\bin\Debug\net8.0-windows\InterpolSystem.pdb
-C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.ArchiveForm.resources
-C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.CriminalDetailsForm.resources
-C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.Form1.resources
-C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.FormRegistry.resources
-C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.GangDetailsForm.resources
 C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.csproj.GenerateResource.cache
 C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.AssemblyInfoInputs.cache
@@ -19,3 +14,8 @@ C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\ne
 C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.pdb
 C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.genruntimeconfig.cache
 C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\ref\InterpolSystem.dll
+C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.Forms.FormRegistry.resources
+C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.Forms.MainForm.resources
+C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.Forms.ArchiveForm.resources
+C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.Forms.CriminalDetailsForm.resources
+C:\Users\Сергей\source\repos\Interpol-Database\InterpolSystem\obj\Debug\net8.0-windows\InterpolSystem.Forms.GangDetailsForm.resources

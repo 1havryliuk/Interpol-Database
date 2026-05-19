@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using InterpolSystem.Models;
-
-namespace InterpolSystem
+namespace InterpolSystem.Forms
 {
     public partial class GangDetailsForm : Form
     {

@@ -297,5 +297,28 @@
     },
     "IsArchived": false,
     "IsDead": false
+  },
+  {
+    "FirstName": "вася",
+    "LastName": "",
+    "Nickname": "",
+    "Height": 0,
+    "HairColor": "",
+    "EyeColor": "",
+    "SpecialSigns": "",
+    "Citizenship": "",
+    "BirthPlace": "",
+    "BirthDate": "2026-05-19T00:00:00+03:00",
+    "LastResidence": "",
+    "Languages": "",
+    "CrimeProfession": "",
+    "LastCase": "",
+    "Gang": {
+      "Name": "",
+      "Country": null,
+      "MembersCount": 0
+    },
+    "IsArchived": false,
+    "IsDead": false
   }
 ]

@@ -1,4 +1,4 @@
-﻿namespace InterpolSystem
+﻿namespace InterpolSystem.Forms
 {
     partial class ArchiveForm
     {

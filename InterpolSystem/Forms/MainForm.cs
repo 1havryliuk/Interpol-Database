@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace InterpolSystem
+using InterpolSystem.Models;
+namespace InterpolSystem.Forms
 {
     public partial class MainForm : Form
     {

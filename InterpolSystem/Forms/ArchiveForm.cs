@@ -4,12 +4,11 @@ using System.Linq;
 using System.Windows.Forms;
 using InterpolSystem.Models;
 
-namespace InterpolSystem
+namespace InterpolSystem.Forms
 {
     public partial class ArchiveForm : Form
     {
         private List<Criminal> criminals;
-
         public ArchiveForm(List<Criminal> list)
         {
             InitializeComponent();
