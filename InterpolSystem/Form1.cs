@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
 using System.IO;
-using System.Text.Json;
+using System.Linq;
 using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace InterpolSystem
 {
@@ -385,20 +386,49 @@ namespace InterpolSystem
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            // перевірка імені
+            if (textBoxFirstName.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show(
+                    "Ім'я не повинно містити цифри!");
+
+                return;
+            }
+
+            // перевірка прізвища
+            if (textBoxLastName.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show(
+                    "Прізвище не повинно містити цифри!");
+
+                return;
+            }
+
+            // перевірка клички
+            if (textBoxNickname.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show(
+                    "Кличка не повинна містити цифри!");
+
+                return;
+            }
+
             Criminal newCriminal = new Criminal();
+
+            newCriminal.FirstName = textBoxFirstName.Text;
+            newCriminal.LastName = textBoxLastName.Text;
+            newCriminal.Nickname = textBoxNickname.Text;
+
+            criminals.Add(newCriminal);
 
             CriminalDetailsForm form =
                 new CriminalDetailsForm(newCriminal, criminals);
 
             form.ShowDialog();
 
-            // якщо після заповнення є ім'я — додаємо
-            if (!string.IsNullOrWhiteSpace(newCriminal.FirstName))
-            {
-                criminals.Add(newCriminal);
+            SaveData();
 
-                MessageBox.Show("Злочинця додано!");
-            }
+            MessageBox.Show("Злочинця додано!");
         }
 
         private void buttonOpenRegistry_Click(object sender, EventArgs e)

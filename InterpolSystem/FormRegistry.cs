@@ -107,11 +107,7 @@ namespace InterpolSystem
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-
-            form.Show();
-
-            this.Hide();
+            this.Close();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

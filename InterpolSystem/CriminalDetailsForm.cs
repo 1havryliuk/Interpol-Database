@@ -164,5 +164,58 @@ namespace InterpolSystem
                 form.ShowDialog();
             }
         }
+        private void txtFirstName_KeyPress(
+            object sender,
+            KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+                MessageBox.Show(
+                    "Ім'я не повинно містити цифри!");
+            }
+        }
+
+        private void txtLastName_KeyPress(
+            object sender,
+            KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+                MessageBox.Show(
+                    "Прізвище не повинно містити цифри!");
+            }
+        }
+
+        private void txtNickname_KeyPress(
+            object sender,
+            KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+
+                MessageBox.Show(
+                    "Кличка не повинна містити цифри!");
+            }
+        }
+
+        private void txtHeight_KeyPress(
+            object sender,
+            KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) &&
+                e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+
+                MessageBox.Show(
+                    "У поле зросту можна вводити тільки цифри!");
+            }
+        }
     }
+
 }

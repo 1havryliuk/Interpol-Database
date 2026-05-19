@@ -49,7 +49,7 @@
     "FirstName": "Віто",
     "LastName": "Корлеоне",
     "Nickname": "Хрещений батько",
-    "Height": 180,
+    "Height": 0,
     "HairColor": "Сивий",
     "EyeColor": "Карі",
     "SpecialSigns": "Хриплий голос",
@@ -62,8 +62,8 @@
     "LastCase": "Відмивання грошей",
     "Gang": {
       "Name": "Сім'я Корлеоне",
-      "Country": "Італія",
-      "MembersCount": 150
+      "Country": null,
+      "MembersCount": 0
     },
     "IsArchived": false,
     "IsDead": false

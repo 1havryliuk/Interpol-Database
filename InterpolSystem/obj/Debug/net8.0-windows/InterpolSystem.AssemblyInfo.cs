@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InterpolSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91d089266b8d16278b96170c970a56824e3327dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22a5a402a0cfe01f8f78ff81abea696baefcb851")]
 [assembly: System.Reflection.AssemblyProductAttribute("InterpolSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InterpolSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

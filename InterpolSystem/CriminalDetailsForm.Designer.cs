@@ -83,6 +83,7 @@
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(285, 27);
             txtFirstName.TabIndex = 1;
+            txtFirstName.KeyPress += txtFirstName_KeyPress;
             // 
             // lblLastName
             // 
@@ -100,6 +101,7 @@
             txtLastName.Name = "txtLastName";
             txtLastName.Size = new Size(285, 27);
             txtLastName.TabIndex = 2;
+            txtLastName.KeyPress += txtLastName_KeyPress;
             // 
             // lblNickname
             // 
@@ -117,6 +119,7 @@
             txtNickname.Name = "txtNickname";
             txtNickname.Size = new Size(285, 27);
             txtNickname.TabIndex = 3;
+            txtNickname.KeyPress += txtHeight_KeyPress;
             // 
             // lblHeight
             // 
@@ -126,6 +129,7 @@
             lblHeight.Size = new Size(78, 20);
             lblHeight.TabIndex = 34;
             lblHeight.Text = "Зріст (см):";
+            txtHeight.KeyPress += txtHeight_KeyPress;
             // 
             // txtHeight
             // 
@@ -439,13 +443,13 @@
             Controls.Add(txtFirstName);
             Controls.Add(lblFirstName);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            KeyPreview = true;
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "CriminalDetailsForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Картка злочинця — Картотека Інтерполу";
-            KeyPreview = true;
             ResumeLayout(false);
             PerformLayout();
         }
